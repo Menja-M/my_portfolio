@@ -5,7 +5,6 @@ from app import crud
 from app.db.connection import get_db
 from app.schemas import all_schemas as schemas
 
-
 router = APIRouter(prefix="/api/sections", tags=["sections"])
 
 @router.get("/", response_model=List[schemas.Section])
