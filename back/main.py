@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.db.connection import engine, Base
-from app.routes import sections, projects, contacts, skills, social_links
+from .app.db.connection import engine, Base
+from .app.routes import sections, projects, contacts, skills, social_links
 
 # Créer les tables
 Base.metadata.create_all(bind=engine)
